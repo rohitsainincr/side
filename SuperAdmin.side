@@ -1,0 +1,298 @@
+{
+  "id": "c9aa7753-ad0a-43b6-86db-a71fc93df83d",
+  "version": "2.0",
+  "name": "SuperAdmin",
+  "url": "https://192.168.0.100:8443",
+  "tests": [{
+    "id": "5b4a6ced-1417-4a55-b8bd-ff7bea994995",
+    "name": "1.LoginPage",
+    "commands": [{
+      "id": "03c094d0-1218-45f8-a236-925022f10125",
+      "comment": "",
+      "command": "open",
+      "target": "/auth?method=LOGOUT",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0d44576-ac3b-445c-b81c-78f8a7f5dc51",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25a76984-bdda-4b6c-9d4b-77201bce8fdd",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.field-container:nth-child(2) > .field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "admin@istarindia.com"
+    }, {
+      "id": "e48acb9e-f686-406e-9eb2-46226b4603b9",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.field-container:nth-child(3) > .field", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "test123"
+    }, {
+      "id": "d8ac61d7-2ce5-4863-9cc5-931da650af22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@value='validate']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3c8400b7-9731-468c-970c-b7a582a6265f",
+    "name": "2.createOrganization",
+    "commands": [{
+      "id": "ecdf72d2-f0a7-41b7-baec-49038c3a0eb5",
+      "comment": "",
+      "command": "open",
+      "target": "/SUPER_ADMIN/dashboard.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5c1dff8-2252-440d-a34c-277b404888f0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54ece522-f39e-42c5-ae65-d1e678893e0a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create Organization",
+      "targets": [
+        ["linkText=Create Organization", "linkText"],
+        ["css=.istar_onclick", "css:finder"],
+        ["xpath=//a[contains(text(),'Create Organization')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/SUPER_ADMIN/create_org.jsp')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create Organization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6932af2-fced-40cc-8084-12fc051bb92b",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=orgname", "name"],
+        ["css=#exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "SaleskenTesting"
+    }, {
+      "id": "c1d4d42a-3f56-45b1-b6dd-675e65828fb6",
+      "comment": "",
+      "command": "type",
+      "target": "id=url",
+      "targets": [
+        ["id=url", "id"],
+        ["name=website", "name"],
+        ["css=#url", "css:finder"],
+        ["xpath=//input[@id='url']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/div/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "http://saleskenTest.ai.com"
+    }, {
+      "id": "4ba1432d-fd03-47c4-9a79-10f4a7ebeb37",
+      "comment": "",
+      "command": "type",
+      "target": "id=contact_name",
+      "targets": [
+        ["id=contact_name", "id"],
+        ["name=contact_name", "name"],
+        ["css=#contact_name", "css:finder"],
+        ["xpath=//input[@id='contact_name']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Rohit kumar saini"
+    }, {
+      "id": "213e851c-4ef5-40b0-af0f-7d8b617dbb10",
+      "comment": "",
+      "command": "type",
+      "target": "id=contact_email",
+      "targets": [
+        ["id=contact_email", "id"],
+        ["name=contact_email", "name"],
+        ["css=#contact_email", "css:finder"],
+        ["xpath=//input[@id='contact_email']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/div/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "rohitsainincr@gmail.com"
+    }, {
+      "id": "bf374d4c-1245-418a-9a14-fc8bdc7d98a6",
+      "comment": "",
+      "command": "type",
+      "target": "id=employee_count",
+      "targets": [
+        ["id=employee_count", "id"],
+        ["name=empcount", "name"],
+        ["css=#employee_count", "css:finder"],
+        ["xpath=//input[@id='employee_count']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "100"
+    }, {
+      "id": "db939a43-b0cb-4a4b-bb1e-5a4a03b3ae7e",
+      "comment": "",
+      "command": "type",
+      "target": "id=contact_phone",
+      "targets": [
+        ["id=contact_phone", "id"],
+        ["name=contactphone", "name"],
+        ["css=#contact_phone", "css:finder"],
+        ["xpath=//input[@id='contact_phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "919568381047"
+    }, {
+      "id": "1e34609e-d6db-49e0-bfe0-e4d21886843d",
+      "comment": "",
+      "command": "select",
+      "target": "id=industry_select",
+      "targets": [],
+      "value": "label=Information Technology/IT"
+    }, {
+      "id": "d7efd4b8-05a4-4e18-b2d7-ecc0541da2ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=contact_person_name",
+      "targets": [
+        ["id=contact_person_name", "id"],
+        ["name=ownername", "name"],
+        ["css=.orgrow:nth-child(2) > .orgcol-5:nth-child(1) #contact_person_name", "css:finder"],
+        ["xpath=//input[@id='contact_person_name']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "Rohit Kumar Saini"
+    }, {
+      "id": "54670f56-ff3d-4e77-a0c8-dc73e5322b4d",
+      "comment": "",
+      "command": "type",
+      "target": "id=contact_person_email",
+      "targets": [
+        ["id=contact_person_email", "id"],
+        ["name=owneremail", "name"],
+        ["css=.orgrow:nth-child(2) > .orgcol-5:nth-child(1) #contact_person_email", "css:finder"],
+        ["xpath=//input[@id='contact_person_email']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[2]/div/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "rohitkumarsaini@gmail.com"
+    }, {
+      "id": "639b177d-ce1e-4c8e-b62b-707dd034549d",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=ownermobile", "name"],
+        ["css=.orgrow:nth-child(2) > .orgcol-5:nth-child(1) #phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[2]/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "918090784203"
+    }, {
+      "id": "749689c4-b08a-419a-9371-82ebdf3ba5cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.create_org",
+      "targets": [
+        ["css=.create_org", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Organization')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "059222cf-0616-4fd7-82a1-2fec15a3be24",
+    "name": "3.LogOutPage",
+    "commands": [{
+      "id": "5a4bd070-c8c5-4d5d-880d-3baf34b1586b",
+      "comment": "",
+      "command": "open",
+      "target": "/SUPER_ADMIN/dashboard.jsp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e12ed791-300b-4858-a7bd-19f00e76ed6b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cecf9c43-9405-4fbd-b6fa-d851eeb81d76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.istar_font-20",
+      "targets": [
+        ["css=.istar_font-20", "css:finder"],
+        ["xpath=//div[@id='navbarsExampleDefault']/div[2]/div/div/div/div/button/i", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/button/i", "xpath:position"],
+        ["xpath=//i[contains(.,'arrow_drop_down')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dae79f0d-22d0-46a2-9cc6-f2fb6bcda401",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-item:nth-child(3)",
+      "targets": [
+        ["css=.dropdown-item:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='navbarsExampleDefault']/div[2]/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth?method=LOGOUT')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c522a93-5d2e-42f7-8416-a172eae329ec",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "53f6188a-edba-480d-adf7-583bd4b7e287",
+    "name": "SuperAdmin",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5b4a6ced-1417-4a55-b8bd-ff7bea994995", "3c8400b7-9731-468c-970c-b7a582a6265f", "059222cf-0616-4fd7-82a1-2fec15a3be24"]
+  }],
+  "urls": ["https://192.168.0.100:8443/"],
+  "plugins": []
+}
